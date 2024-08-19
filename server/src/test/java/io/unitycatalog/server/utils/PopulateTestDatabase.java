@@ -128,7 +128,8 @@ public class PopulateTestDatabase {
 
     // create uniform table
     String uniformTableName = "marksheet_uniform";
-    String uniformTablePath = "file:///tmp/" + uniformTableName;
+    String externalStorageRoot = "etc/data/external/";
+    String uniformTablePath = externalStorageRoot + catalogName + "/" + schemaName + "/tables/" + uniformTableName;
     UUID uniformTableId = UUID.randomUUID();
     ColumnInfoDAO idColumnUniform =
         ColumnInfoDAO.builder()
